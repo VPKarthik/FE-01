@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT Food</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <link rel="stylesheet" href="styling.css">
+    
+</head>
+<body>
+    <h2 style="text-align: center;">=========Price List=========</h2>     
+    <table id="table1">
+        <tr>
+            <thead>            
+                <th>Food Item</th>
+                <th></th>
+                <th>Price(Rs.)</th>
+            </thead>
+        </tr>
+        <tbody>
+            <tr>
+                <td>Chicken Pizza</td>
+                <td>-</td>
+                <td>700.00</td>            
+            </tr>
+            <tr>
+                <td>Vegetable Pizza</td>
+                <td>-</td>
+                <td>500.00</td>
+            </tr>
+            <tr>
+                <td>Chicken Kottu</td>
+                <td>-</td>
+                <td>300.00</td>                        
+            <tr>            
+                <td>Vegetable Kottu</td>
+                <td>-</td>
+                <td>200.00</td>
+            </tr>
+            <tr>
+                <td>Water Bottle</td>   
+                <td>-</td>   
+                <td>70.00 </td></tr>
+            </tr> 
+        </tbody>
+    </table>
+    <h2 style="text-align: center;font-size: 50px;">FIT Food -Order Form</h2>
+    <form method="get">
+        <table style="background-color: rgb(155, 255, 144); margin-left: 10%;">
+            <tr>
+                <td>Branch:</td>
+                <td>
+                    <select required>
+                        <option value="">--Select Item--</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td>
+                    <input type="text" name="Username" oninput="this.value = this.value.replace(/[^a-zA-z]/, '')"  placeholder="Username"  required id="user1">
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile:</td>
+                <td><input type="tel" name="PhoneNumber" minlength="10" maxlength="10" pattern="[1-9]{1}[0-9]{9}"  oninput="this.value = this.value.replace(/[^0-9]/, '')" required id="phoneNumber" ></td>
+            </tr>
+        </table><br>
+        <table style="margin-left: 10%;width: 50%;">
+            <tr>
+                <thead>
+                    <th>Food Item</th>
+                    <th></th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </thead>                
+            </tr>
+            <tr>
+                <td>Item 1:</td>
+                <td>
+                    <select id="Item-1" name="Item-1" onchange="apply(this.id,document.getElementById('quan1').id,document.getElementById('pric1').id)">
+                        <option value="1">--Select Item--</option>
+                        <option value="Chicken Pizza">Chicken Pizza</option>
+                        <option value="Vegetable Pizza">Vegetable Pizza</option>
+                        <option value="Chicken Kottu">Chicken Kottu</option>
+                        <option value="Vegetable Kottu">Vegetable Kottu</option>
+                        <option value="Water Bottle">Water Bottle</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" value="0" min="0" id="quan1">
+                </td>
+                <td>
+                    <input type="text" id="pric1">
+                </td>
+            </tr>
+            <tr>
+                <td>Item 2:</td>
+                <td>
+                    <select id="Item-2" name="Item-2" onchange="apply(this.id,document.getElementById('quan2').id,document.getElementById('pric2').id)">
+                        <option value="2">--Select Item--</option>
+                        <option value="Chicken Pizza">Chicken Pizza</option>
+                        <option value="Vegetable Pizza">Vegetable Pizza</option>
+                        <option value="Chicken Kottu">Chicken Kottu</option>
+                        <option value="Vegetable Kottu">Vegetable Kottu</option>
+                        <option value="Water Bottle">Water Bottle</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="quan2" value="0" min="0" >
+                </td>
+                <td>
+                    <input type="text" id="pric2">
+                </td>
+            </tr>
+            <tr>
+                <td>Item 3:</td>
+                <td>
+                    <select id="Item-3" name="Item-3" onchange="apply(this.id,document.getElementById('quan3').id,document.getElementById('pric3').id)">
+                        <option value="3">--Select Item--</option>
+                        <option value="Chicken Pizza">Chicken Pizza</option>
+                        <option value="Vegetable Pizza">Vegetable Pizza</option>
+                        <option value="Chicken Kottu">Chicken Kottu</option>
+                        <option value="Vegetable Kottu">Vegetable Kottu</option>
+                        <option value="Water Bottle">Water Bottle</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="quan3" value="0" min="0" >
+                </td>
+                <td>
+                    <input type="text" id="pric3">
+                </td>
+            </tr>
+            <tr>
+                <td>Item 4:</td>
+                <td>
+                    <select id="Item-4" name="Item-4" onchange="apply(this.id,document.getElementById('quan4').id,document.getElementById('pric4').id)">
+                        <option value="4">--Select Item--</option>
+                        <option value="Chicken Pizza">Chicken Pizza</option>
+                        <option value="Vegetable Pizza">Vegetable Pizza</option>
+                        <option value="Chicken Kottu">Chicken Kottu</option>
+                        <option value="Vegetable Kottu">Vegetable Kottu</option>
+                        <option value="Water Bottle">Water Bottle</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="quan4" value="0" min="0" >
+                </td>
+                <td>
+                    <input type="text" id="pric4">
+                </td>
+            </tr>
+            <tr>
+                <td>Item 5:</td>
+                <td>
+                    <select id="Item-5" name="Item-5" onchange="apply(this.id,document.getElementById('quan5').id,document.getElementById('pric5').id)">
+                        <option value="5">--Select Item--</option>
+                        <option value="Chicken Pizza">Chicken Pizza</option>
+                        <option value="Vegetable Pizza">Vegetable Pizza</option>
+                        <option value="Chicken Kottu">Chicken Kottu</option>
+                        <option value="Vegetable Kottu">Vegetable Kottu</option>
+                        <option value="Water Bottle">Water Bottle</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="quan5" value="0" min="0" >
+                </td>
+                <td>
+                    <input type="text" id="pric5">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                   <input id="input1" type="button" value="Create Bill" onclick="createBill()">
+                </td>
+                <td>
+                    <button id="button1" type="reset" onclick="clear()">Clear</button> 
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+    <br>
+    <h4 id="nam"></h4>
+    <h4 id="mob"></h4>
+
+    <!-- <table>
+        <thead>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </thead>
+        <tbody id="tab1">
+
+        </tbody>
+    </table> -->
+    <br>
+    <br>
+    <textarea id="area" readonly cols="40" rows="20"></textarea>
+    <script src="index.js"></script>
+</body>
+</html>
